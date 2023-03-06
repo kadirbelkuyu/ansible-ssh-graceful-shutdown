@@ -1,0 +1,6 @@
+- name: Shutdown hosts gracefully
+  hosts: all
+  become: true
+  tasks:
+    - name: Shutdown
+      command: "/sbin/shutdown -h +1 'Ansible initiated shutdown'"
